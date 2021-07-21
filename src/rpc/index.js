@@ -547,7 +547,7 @@ class RPC {
       const waitMessage = this.messagesWaitResponse.get(message.req_msg_id);
 
       if (message.result._ === 'mt_rpc_error') {
-        waitMessage.reject(message.result);
+        waitMessage.resolve(message.result);
       } else {
         waitMessage.resolve(message.result);
       }
