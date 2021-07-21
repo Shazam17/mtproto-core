@@ -18,12 +18,7 @@
     "telegram-web",
     "telegram-online"
   ],
-  "homepage": "https://mtproto-core.js.org/",
-  "bugs": {
-    "url": "https://github.com/alik0211/mtproto-core/issues"
-  },
-  "author": "Ali Gasymov <alik0211alik@gmail.com> (https://gasymov.com/)",
-  "repository": "github:alik0211/mtproto-core",
+  "repository": "github:Shazam17/mtproto-core",
   "files": [
     "/envs",
     "/src"
@@ -40,7 +35,6 @@
     "generate-tl": "run-p generate-builder generate-parser",
     "prepublishOnly": "run-s generate-tl"
   },
-  "license": "GPL-3.0",
   "dependencies": {
     "aes-js": "3.1.2",
     "big-integer": "1.6.48",
