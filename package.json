@@ -1,5 +1,5 @@
 {
-  "name": "@johnpower71/mtproto",
+  "name": "@johnpower71/mtproto-core",
   "version": "6.0.1",
   "description": "Telegram API JS (MTProto) client library for Node.js and browser",
   "keywords": [
@@ -35,6 +35,7 @@
     "generate-tl": "run-p generate-builder generate-parser",
     "prepublishOnly": "run-s generate-tl"
   },
+  "license": "GPL-3.0",
   "dependencies": {
     "aes-js": "3.1.2",
     "big-integer": "1.6.48",
