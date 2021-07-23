@@ -17,6 +17,7 @@ const {
 } = require('../utils/common');
 const baseDebug = require('../utils/common/base-debug');
 const pqPrimeFactorization = require('../crypto/pq');
+const { webPageNotModified } = require('../tl/builder');
 
 class RPC {
   constructor({ dc, context, transport }) {
@@ -545,6 +546,10 @@ class RPC {
       this.debug('handling RPC result for message', message.req_msg_id);
 
       const waitMessage = this.messagesWaitResponse.get(message.req_msg_id);
+
+      if(!waitMessage){
+        return;
+      }
 
       if (message.result._ === 'mt_rpc_error' && waitMessage) {
         waitMessage.resolve(message.result);
